@@ -21,7 +21,7 @@ def AP(p,i,n): #GG
     a= (p*i*(1+i)**n)/(((1+i)**n) - 1)
     return a
 
-def PA(a,i,n):
+def PA(a,i,n): #GG
     i=i/100
     p = a*((((1+i)**n) -1)/(i*((1+i)**n)))
     return p
@@ -36,6 +36,8 @@ def PG(g,i,n):
     p = g*(((i+1)**n - i*n - 1)/(i**2 * (1+i)**n))
     return p
 
-print(PA(4000,15,5))
+def AEq(a0,g,i,n):
+    aeq = a0 + AG(g,i,n)
+    return aeq
 
 
