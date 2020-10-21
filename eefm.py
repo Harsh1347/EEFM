@@ -1,3 +1,5 @@
+import wcom
+
 def FP(p,i,n): #GG
     f = p*(1+(i/100))**n
     return f
@@ -37,7 +39,17 @@ def PG(g,i,n):
     return p
 
 def AEq(a0,g,i,n):
-    aeq = a0 + AG(g,i,n)
+    if g > 0:
+        aeq = a0 + AG(g,i,n)
+    else:
+        aeq = a0 - AG(g,i,n)
     return aeq
 
+def PEq(a,g,i,n):
+    if g > 0:
+        peq = PA(a,i,n) + PG(g,i,n)
+    else:
+        peq = PA(a,i,n) - PG(g,i,n)
+    return peq
 
+print(FA(500,8,3))
